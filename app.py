@@ -24,7 +24,10 @@ def homepage():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
-    pass
+    if request.method == 'POST':
+        data = request.form.to_dict(flat= True)
+        print(data)
+        return "Success"
 
 
 

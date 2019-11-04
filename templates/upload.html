@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block container %}
+
+<title>Upload new File</title>
+<div class="row">
+  <div class="col s12">
+    <form action="{{ url_for('.upload') }}" method=post enctype=multipart/form-data> <div
+      class="card blue-grey darken-2 card">
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Surname" id="sn" type="text" class="validate">
+            <label for="first_name">Surname Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Name" id="fn" type="text" class="validate">
+            <label for="first_name">Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Date Of Birth" id="dob" type="text" class="validate">
+            <label for="first_name">Date Of Birth</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select id="Selector" name="gen">
+              <option value="" selected="selected" disabled selected>Your Gender</option>
+              
+              <option value='male'>Male</option>
+              <option value='female'>Female</option>
+              
+            </select>
+            <label>Select Gender</label>
+          </div>
+        </div>
+
+        
+        
+        
+        
+      </div>
+      <div class="card-action">
+        <input value="submit" type="submit" class="yellow darken-3 white-text waves-effect btn">
+      </div>
+  </div>
+  </form>
+</div>
+</div>
+
+{% endblock %}
